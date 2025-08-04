@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 const BgAnimation = () => {
   return (
     <>
-
-    {/* background animtion */}
       <motion.div
         initial={{
           width: 0,
@@ -17,10 +15,8 @@ const BgAnimation = () => {
           ease: "easeInOut",
           delay: 0.2,
         }}
-        className="bg-gradient-to-b from-gray-200 to-gray-400 h-screen  absolute top-0 left-0 z-0"
+        className="bg-gradient-to-b from-gray-200 to-gray-400 h-screen z-0 absolute left-0 top-0"
       ></motion.div>
-
-      {/* bottom squre animation */}
       <motion.div
         initial={{
           width: 0,
@@ -35,25 +31,23 @@ const BgAnimation = () => {
         }}
         className="bg-gray-800 border-t-2 border-gray-600 h-[20vh] z-20 absolute left-0 bottom-0"
       ></motion.div>
-
-{/* middle squre animtion */}
       <motion.div
-      initial = {{
-        x : "-100vw",
-        rotateZ: 20,
-
-      }}
-      animate = {{
-        x: 0,
-    
-      }}
-        transition={{
-            duration: 1,
-            ease: "easeInOut",
-            delay: 0.9,
+        initial={{
+          x: "-100vw",
+          rotateZ: 20,
         }}
-      className="bg-gray-800 h-[170vh] w-[60vw] z-10 absolute -left-[10vw] -top-[50vh]"></motion.div>
+        animate={{
+          x: 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.9,
+        }}
+        className="bg-gray-800 h-[170vh] w-[60vw] z-10 absolute -left-[10vw] -top-[50vh]"
+      ></motion.div>
     </>
   );
 };
+
 export default BgAnimation;

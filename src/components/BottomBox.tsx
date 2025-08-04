@@ -1,13 +1,27 @@
-import React from 'react';
 
-type BottomBoxProps = {
-  children: React.ReactNode;
+import { motion } from "framer-motion";
+
+const boxVariants = {
+  initial: {
+    y: 100,
+  },
+  animate: {
+    y: 0,
+  },
 };
 
-export default function BottomBox({ children }: BottomBoxProps) {
+interface BottomBoxProps {
+    children: React.ReactNode;
+    }
+const BottomBox = (props: BottomBoxProps) => {
   return (
-    <div className="bg-gray-500 text-gray-200 uppercase text-center text-base rounded-t-md flex justify-center items-center underline underline-offset-4">
-      {children}
-    </div>
+    <motion.div
+      variants={boxVariants}
+      className="bg-gray-500 uppercase text-gray-200 text-center text-base rounded-t-md flex justify-center items-center underline underline-offset-4"
+    >
+      {props.children}
+    </motion.div>
   );
-}
+};
+
+export default BottomBox;
