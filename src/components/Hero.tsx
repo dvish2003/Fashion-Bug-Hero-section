@@ -7,7 +7,7 @@ const containerVariants = {
   animate: {
     transition: {
       delayChildren: 2, //
-      staggerChildren: 0.6, // Stagger the children animations  this use to gap for aniamtion delay with children boxes
+      staggerChildren: 0.6, // Stagger the children animations  this use to gap for animation delay with children boxes
     },
   },
 };
